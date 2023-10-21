@@ -131,11 +131,12 @@ blackBanner.appendChild(h4Element);
 
 document.body.appendChild(blackBanner);
 
+//affichage en fonction du token
+
 if (token) {
     // Le token est présent, affiche le bouton "Modifier" et le bouton de déconnexion 
     const modifierButton = document.getElementById("modifierButton");
     modifierButton.style.display = "block";
-    // banner.style.display = "flex";
     allbtn.style.display = "none" // Pour afficher le bouton "Modifier"
 
     loginButton.style.display = "none"; // Pour masquer le bouton de connexion (login)
@@ -313,7 +314,7 @@ closeSecondModalButton.addEventListener("click",(e) =>  {
     resetimg();
 });
 
-console.log(closeSecondModalButton);
+
 
 document.querySelectorAll('.js-modal').forEach(a => {
     a.addEventListener('click', openmodal);
@@ -396,7 +397,7 @@ async function deleteimg(work,items,containerModal) {
             alert("La suppression a échoué.");
         }
     } catch (error) {
-        alert("Une erreur s'est produite :", error);
+        alert("Une erreur s'est produite");
     }
 }
 const form = document.getElementById("formphoto");
@@ -498,7 +499,7 @@ deleteIcon.addEventListener("click", async function (event) {
             alert("La suppression a échoué.");
         }
     } catch (error) {
-        alert("Une erreur s'est produite :", error);
+        alert("Une erreur s'est produite");
     }
 });
 
@@ -518,6 +519,7 @@ deleteIcon.addEventListener("click", async function (event) {
             
             
             const newWorkImageForLiveUpdates = newWorkImage.cloneNode(true);
+            
             newWorkElementModal.appendChild(newWorkImageForLiveUpdates)
             newWorkElementModal.appendChild(deleteIcon);
 

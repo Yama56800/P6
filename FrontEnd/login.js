@@ -4,9 +4,6 @@ const loginButton = document.getElementById("loginButton");
 const api = 'http://localhost:5678/api/users/login';
 
 
-// const emailCorrect = "sophie.bluel@test.tld";
-// const passwordCorrect = "S0phie";
-
 
 
 // apell token de l'api / stocker le token sur le local storage envoie vers index comme admin possibilité modale
@@ -16,7 +13,6 @@ loginButton.addEventListener("click", function() {
     const emailValue = emailInput.value;
     const passwordValue = passwordInput.value;
 
-    // if (emailValue === emailCorrect && passwordValue === passwordCorrect) {
         // Crée un objet de données pour l'authentification
         const data = {
             email: emailValue,
@@ -46,7 +42,6 @@ loginButton.addEventListener("click", function() {
             
                 // Stocke le token dans le localStorage
                 localStorage.setItem("token", data.token);
-                console.log(data.token)
                 // Redirige  vers la page index.html 
                 window.location.href = "index.html";
         })
@@ -54,6 +49,6 @@ loginButton.addEventListener("click", function() {
 
         .catch(error => {
             alert("Erreur d'authentification, email or password false : " + error.message);
-            console.error(error)
+            
         })
     });
