@@ -22,13 +22,13 @@
 	<div class="header-div">
 	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
-		<ul>
+		<div>
 			<a href="">projets</a>
 			<a href="#contact">contact</a>
 			<a id="loginButton" href="./login.html">login</a>
 			<a id="logoutButton">logout</a>
 			<a href="https://www.instagram.com/"><img src="./assets/icons/instagram.png" alt="Instagram"></a>
-		</ul>
+		</div>
 	</nav>
 	</div>
 </header>
@@ -56,7 +56,7 @@
 			<button id="appartements">Appartements</button>
 			<button id="hotels">Hôtels & Restaurants</button>
 		</div>
-		<aside id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="false" style="display: none;">
+		<aside id="modal" class="modal" aria-hidden="true"  aria-modal="false" style="display: none;">
 			<div class="modal-wrap js-modal-stop">
 
 				<i class="js-modal-close fa-solid fa-x"></i>
@@ -72,10 +72,10 @@
 		</aside>
 
 
-		<aside id="second-modal" class="second-modal" aria-hidden="true" role="dialog" aria-modal="false" style="display: none;">
+		<aside id="second-modal" class="second-modal" aria-hidden="true"  aria-modal="false" style="display: none;">
 			<div class="modal-wrap js-modal-stop">
 				<i class="js-first-modal-close fa-solid fa-arrow-left"></i>
-				<i class="js-modal-close fa-solid fa-x"></i>
+				<i class="js-close fa-solid fa-x"></i>
 				<div class="wrap-second">
 					<h3> Ajout photo</h3>
 
@@ -94,13 +94,13 @@
 						<label for="photo">jpg, png : 4 Mo max</label>
 					</div>
 					<div class="footer-form">
-						<label class="keep-visible label-title" for="titre">Titre :</label>
+						<label class="keep-visible label-title">Titre</label>
 						<input type="text" id="title">
 					
-						<label  class="keep-visible" for="categorySelect">Catégorie :</label>
+						<label  class="keep-visible" > Catégorie </label>
 						<select id="category">
 							<option value="">Tous</option> 
-							<!-- TOUS = vide -->
+							
 							<option value="1">Objets</option>
 							<option value="2">Appartements</option>
 							<option value="3">Hôtels</option>
@@ -109,9 +109,7 @@
 					
 						<button type="submit" class="js-valider-modal" id="validerButton"> Valider</button>
 					</div>
-				<!-- <div class="footer-modal"> 
-					
-				</div> -->
+				
 
 					</form>
 					</div>
